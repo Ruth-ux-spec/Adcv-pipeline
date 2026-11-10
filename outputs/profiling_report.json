@@ -1,0 +1,295 @@
+{
+  "rows": 121,
+  "columns_count": 10,
+  "columns": {
+    "artist_name": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "name"
+      },
+      "missing": {
+        "missing_count": 1,
+        "missing_pct": 0.8
+      },
+      "cardinality": {
+        "unique_count": 113,
+        "unique_case_insensitive": 108,
+        "top_values": {
+          "Sam Smith": 2,
+          "DAVID GUETTA": 2,
+          "Lil Uzi Vert": 2
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "sex": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "categorical"
+      },
+      "missing": {
+        "missing_count": 2,
+        "missing_pct": 1.7
+      },
+      "cardinality": {
+        "unique_count": 7,
+        "unique_case_insensitive": 5,
+        "top_values": {
+          "Male": 46,
+          "M": 22,
+          "male": 15
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "country_of_origin": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "categorical"
+      },
+      "missing": {
+        "missing_count": 2,
+        "missing_pct": 1.7
+      },
+      "cardinality": {
+        "unique_count": 25,
+        "unique_case_insensitive": 22,
+        "top_values": {
+          "USA": 19,
+          "United States": 13,
+          "U.S.A": 10
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "primary_language": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "categorical"
+      },
+      "missing": {
+        "missing_count": 2,
+        "missing_pct": 1.7
+      },
+      "cardinality": {
+        "unique_count": 10,
+        "unique_case_insensitive": 7,
+        "top_values": {
+          "English": 75,
+          "Spanish": 21,
+          "english": 7
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "primary_genre": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "categorical"
+      },
+      "missing": {
+        "missing_count": 2,
+        "missing_pct": 1.7
+      },
+      "cardinality": {
+        "unique_count": 21,
+        "unique_case_insensitive": 15,
+        "top_values": {
+          "Pop": 30,
+          "Hip-Hop": 26,
+          "Reggaeton": 15
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "artist_type": {
+      "type": {
+        "inferred_type": "text",
+        "numeric_share": 0.0,
+        "mixed_type": false,
+        "semantic_type": "categorical"
+      },
+      "missing": {
+        "missing_count": 2,
+        "missing_pct": 1.7
+      },
+      "cardinality": {
+        "unique_count": 3,
+        "unique_case_insensitive": 2,
+        "top_values": {
+          "Solo": 100,
+          "Group": 17,
+          "solo": 2
+        }
+      },
+      "flags": [
+        "inconsistent_case_or_format"
+      ]
+    },
+    "debut_year": {
+      "type": {
+        "inferred_type": "numeric",
+        "numeric_share": 0.964,
+        "mixed_type": true,
+        "semantic_type": "year"
+      },
+      "missing": {
+        "missing_count": 11,
+        "missing_pct": 9.1
+      },
+      "cardinality": {
+        "unique_count": 32,
+        "unique_case_insensitive": 32,
+        "top_values": {
+          "2011": 10,
+          "2015": 9,
+          "2014": 9
+        }
+      },
+      "flags": [
+        "mixed_type_values"
+      ]
+    },
+    "total_streams_m": {
+      "type": {
+        "inferred_type": "numeric",
+        "numeric_share": 1.0,
+        "mixed_type": false,
+        "semantic_type": "numeric_measure"
+      },
+      "missing": {
+        "missing_count": 16,
+        "missing_pct": 13.2
+      },
+      "cardinality": {
+        "unique_count": 97,
+        "unique_case_insensitive": 97,
+        "top_values": {
+          "28155.4": 2,
+          "31214.3": 2,
+          "23990.1": 2
+        }
+      },
+      "flags": []
+    },
+    "lead_streams_m": {
+      "type": {
+        "inferred_type": "numeric",
+        "numeric_share": 1.0,
+        "mixed_type": false,
+        "semantic_type": "numeric_measure"
+      },
+      "missing": {
+        "missing_count": 24,
+        "missing_pct": 19.8
+      },
+      "cardinality": {
+        "unique_count": 87,
+        "unique_case_insensitive": 87,
+        "top_values": {
+          "30750.8": 2,
+          "25,574.20": 2,
+          "20011.2": 2
+        }
+      },
+      "flags": [
+        "high_missing_rate"
+      ]
+    },
+    "feature_streams_m": {
+      "type": {
+        "inferred_type": "numeric",
+        "numeric_share": 1.0,
+        "mixed_type": false,
+        "semantic_type": "numeric_measure"
+      },
+      "missing": {
+        "missing_count": 24,
+        "missing_pct": 19.8
+      },
+      "cardinality": {
+        "unique_count": 87,
+        "unique_case_insensitive": 87,
+        "top_values": {
+          "0": 6,
+          "5,078.30": 2,
+          "5650.9": 2
+        }
+      },
+      "flags": [
+        "high_missing_rate"
+      ]
+    }
+  },
+  "numeric": {
+    "statistics": {
+      "total_streams_m": {
+        "count": 105.0,
+        "mean": 35399.42,
+        "std": 19585.03,
+        "min": 16566.7,
+        "25%": 23990.1,
+        "50%": 29449.0,
+        "75%": 40148.2,
+        "max": 137492.1
+      },
+      "lead_streams_m": {
+        "count": 97.0,
+        "mean": 26168.99,
+        "std": 17796.08,
+        "min": 8548.7,
+        "25%": 15900.0,
+        "50%": 21117.5,
+        "75%": 28797.6,
+        "max": 126177.3
+      },
+      "feature_streams_m": {
+        "count": 97.0,
+        "mean": 9334.43,
+        "std": 8635.56,
+        "min": 0.0,
+        "25%": 3099.4,
+        "50%": 6967.8,
+        "75%": 13687.6,
+        "max": 42640.9
+      }
+    },
+    "correlation": {
+      "total_streams_m": {
+        "total_streams_m": 1.0,
+        "lead_streams_m": 0.895,
+        "feature_streams_m": 0.647
+      },
+      "lead_streams_m": {
+        "total_streams_m": 0.895,
+        "lead_streams_m": 1.0,
+        "feature_streams_m": 0.105
+      },
+      "feature_streams_m": {
+        "total_streams_m": 0.647,
+        "lead_streams_m": 0.105,
+        "feature_streams_m": 1.0
+      }
+    }
+  }
+}
