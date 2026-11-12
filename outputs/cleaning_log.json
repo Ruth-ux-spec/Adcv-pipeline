@@ -1,0 +1,118 @@
+{
+  "rows_before": 121,
+  "rows_after": 106,
+  "quality_before": {
+    "completeness": 92.89,
+    "uniqueness": 89.17,
+    "validity": 86.96,
+    "overall": 89.67
+  },
+  "quality_after": {
+    "completeness": 95.28,
+    "uniqueness": 100.0,
+    "validity": 100.0,
+    "overall": 98.43
+  },
+  "quality_change": 8.76,
+  "steps": [
+    {
+      "column": "total_streams_m",
+      "action": "converted text to float",
+      "values_changed": 29
+    },
+    {
+      "column": "lead_streams_m",
+      "action": "converted text to float",
+      "values_changed": 38
+    },
+    {
+      "column": "feature_streams_m",
+      "action": "converted text to float",
+      "values_changed": 36
+    },
+    {
+      "column": "debut_year",
+      "action": "standardised years to four digits",
+      "values_changed": 15
+    },
+    {
+      "column": "sex",
+      "action": "standardised to Male, Female or Mixed",
+      "values_changed": 101
+    },
+    {
+      "column": "country_of_origin",
+      "action": "unified country names",
+      "values_changed": 67
+    },
+    {
+      "column": "primary_language",
+      "action": "standardised casing",
+      "values_changed": 14
+    },
+    {
+      "column": "primary_genre",
+      "action": "standardised casing",
+      "values_changed": 17
+    },
+    {
+      "column": "artist_type",
+      "action": "standardised casing",
+      "values_changed": 4
+    },
+    {
+      "column": "artist_name",
+      "action": "removed empty or unknown rows",
+      "values_changed": 2
+    },
+    {
+      "column": "artist_name",
+      "action": "conflicting totals, kept the larger",
+      "values_changed": 0,
+      "detail": "['21 Savage', '21savage', '21savage'] totals [39024.3, 23990.1, 23990.1]"
+    },
+    {
+      "column": "artist_name",
+      "action": "conflicting totals, kept the larger",
+      "values_changed": 0,
+      "detail": "['Bad bunny', 'Bad Bunny'] totals [25990.4, 125899.8]"
+    },
+    {
+      "column": "artist_name",
+      "action": "conflicting totals, kept the larger",
+      "values_changed": 0,
+      "detail": "['KAROL G', 'Karol G', 'Karol G'] totals [37549.7, 26800.5, 26800.5]"
+    },
+    {
+      "column": "artist_name",
+      "action": "conflicting totals, kept the larger",
+      "values_changed": 0,
+      "detail": "['Peso Pluma', 'Peso pluma'] totals [33179.8, 26210.0]"
+    },
+    {
+      "column": "artist_name",
+      "action": "removed duplicate artist rows",
+      "values_changed": 13
+    },
+    {
+      "column": "total_streams_m",
+      "action": "filled with lead + feature streams",
+      "values_changed": 4
+    },
+    {
+      "column": "total_streams_m",
+      "action": "filled with genre median",
+      "values_changed": 8
+    },
+    {
+      "column": "total_streams_m",
+      "action": "filled with overall median",
+      "values_changed": 1
+    },
+    {
+      "column": "artist_name",
+      "action": "trimmed spaces and fixed casing",
+      "values_changed": 20
+    }
+  ]
+}
