@@ -74,3 +74,39 @@ Run python -m pytest tests -q from the project folder. There are 11 tests coveri
 
     from cleaning.cleaner import clean_dataset
     final_df, report = clean_dataset(raw, numeric_columns, "outputs")
+
+
+## Module 3: Validation
+
+Checks the cleaned data and saves outputs/validation_report.json.
+
+### Validation rules
+Each rule counts how many rows fail it and lists up to 3 example artists.
+1. Debut year is between 1900 and 2026.
+2. Stream numbers (total, lead, feature) are not negative.
+3. Sex is Male, Female or Mixed.
+4. Artist name is not blank.
+5. Each artist name appears only once.
+6. Lead streams + feature streams do not exceed total streams.
+
+### Anomaly detection
+Uses the IQR rule: a value is flagged if it is more than 3 x IQR outside the middle 50% of the data. An anomaly is unusual, not necessarily wrong (for example, very big artists such as Drake, Taylor Swift and Bad Bunny). Known limitation: stream data is heavily skewed, so the lower limit is negative and very small values can never be flagged.
+
+### Health score
+Health score = 50% rules + 30% completeness + 20% anomalies, each out of 100. Status is PASS only if no rule fails. Anomalies count for less because they are warnings, not errors.
+
+### Results on the cleaned data
+| Part | Score |
+|---|---|
+| Rules | 100.0 |
+| Completeness | 95.28 |
+| Anomalies | 97.48 |
+| Overall health | 98.08 (PASS) |
+
+### Tests
+Run python -m pytest tests -q. There are 19 tests in total (11 for cleaning, 8 for validation). The validation tests build small datasets with one deliberate problem each and check that it is caught.
+
+### How to run
+
+    from validation.validator import validate_dataset
+    report = validate_dataset("outputs/cleaned_data.csv", "outputs")
