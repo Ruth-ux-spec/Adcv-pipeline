@@ -1,0 +1,100 @@
+{
+  "rows": 106,
+  "columns": 10,
+  "status": "PASS",
+  "health_score": 98.08,
+  "score_parts": {
+    "rules": 100.0,
+    "completeness": 95.28,
+    "anomalies": 97.48
+  },
+  "rule_results": [
+    {
+      "rule": "debut year between 1900 and 2026",
+      "column": "debut_year",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "streams not negative",
+      "column": "total_streams_m",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "streams not negative",
+      "column": "lead_streams_m",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "streams not negative",
+      "column": "feature_streams_m",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "sex is Male, Female or Mixed",
+      "column": "sex",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "artist name not blank",
+      "column": "artist_name",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "artist name appears once",
+      "column": "artist_name",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    },
+    {
+      "rule": "lead + feature not above total",
+      "column": "total_streams_m",
+      "failed": 0,
+      "passed": 106,
+      "examples": []
+    }
+  ],
+  "anomalies": [
+    {
+      "column": "total_streams_m",
+      "outliers": 4,
+      "lower_limit": -25837.5,
+      "upper_limit": 90153.03,
+      "examples": [
+        "Drake (137492.1)",
+        "Taylor Swift (127861.1)",
+        "Bad Bunny (125899.8)"
+      ]
+    },
+    {
+      "column": "lead_streams_m",
+      "outliers": 4,
+      "lower_limit": -24772.15,
+      "upper_limit": 70411.57,
+      "examples": [
+        "Taylor Swift (126177.3)",
+        "Drake (94851.1)",
+        "Bad Bunny (82189.3)"
+      ]
+    },
+    {
+      "column": "feature_streams_m",
+      "outliers": 0,
+      "lower_limit": -34526.05,
+      "upper_limit": 53124.8,
+      "examples": []
+    }
+  ]
+}
