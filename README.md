@@ -110,3 +110,67 @@ Run python -m pytest tests -q. There are 19 tests in total (11 for cleaning, 8 f
 
     from validation.validator import validate_dataset
     report = validate_dataset("outputs/cleaned_data.csv", "outputs")
+
+
+## Module 4: Automation
+
+One command runs the whole system: profiling, cleaning, then validation.
+
+### Quick start
+
+    pip install -r requirements.txt
+    python pipeline.py
+
+To use a different settings file:
+
+    python pipeline.py --config my_config.yaml
+
+### Settings (config.yaml)
+| Setting | Meaning |
+|---|---|
+| input_file | raw CSV to process |
+| output_dir | folder for all results |
+| name_column | column holding artist names |
+| numeric_columns | stream columns used for charts and checks |
+
+### What the pipeline does
+1. *Profiling:* loads the raw file, saves profiling_report.json and 3 charts.
+2. *Cleaning:* saves cleaned_data.csv and cleaning_log.json.
+3. *Validation:* checks the cleaned file and saves validation_report.json.
+
+Every step is written to outputs/pipeline.log with a timestamp, so a failure shows which step stopped.
+
+### Exit codes
+| Code | Meaning |
+|---|---|
+| 0 | Pipeline finished and validation PASSED |
+| 1 | The pipeline failed with an error (see the log) |
+| 2 | The pipeline finished but validation FAILED |
+
+### Docker
+A Dockerfile is included.
+
+    docker build -t adcv-pipeline .
+    docker run --rm -v "$(pwd)/outputs:/app/outputs" adcv-pipeline
+
+Note: the Dockerfile follows the standard pattern but was not built on the author's computer, because Docker was not installed there.
+
+### Tests
+Run python -m pytest tests -q. There are 23 tests: 11 for cleaning, 8 for validation and 4 for the pipeline (reading settings, path handling, a full run, and a clean error exit when the config file is missing).
+
+### Result on the Spotify artist data
+| Measure | Value |
+|---|---|
+| Rows | 121 cleaned to 106 |
+| Quality score | 89.67 to 98.43 |
+| Validation | PASS, health score 98.08 |
+| Run time | about 1.3 seconds |
+
+### Project layout
+- profiling/ Module 1: profiling engine and charts
+- cleaning/ Module 2: cleaning pipeline and quality score
+- validation/ Module 3: rules, anomaly detection, health score
+- pipeline.py Module 4: command-line entry point
+- config.yaml, requirements.txt, Dockerfile
+- tests/ all tests
+- outputs/ all generated files

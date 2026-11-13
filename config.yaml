@@ -1,0 +1,8 @@
+# Settings for the ADCV pipeline
+input_file: data/spotify_raw.csv
+output_dir: outputs
+name_column: artist_name
+numeric_columns:
+  - total_streams_m
+  - lead_streams_m
+  - feature_streams_m

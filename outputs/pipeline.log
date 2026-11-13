@@ -1,0 +1,12 @@
+2026-11-13 13:00:54,909 | INFO | Pipeline started
+2026-11-13 13:00:54,910 | INFO | Input file: C:\Users\Hp\adcv-pipeline\data/spotify_raw.csv
+2026-11-13 13:00:54,910 | INFO | Step 1 of 3: profiling
+2026-11-13 13:00:54,922 | INFO | Loaded 121 rows and 10 columns
+2026-11-13 13:00:56,016 | INFO | Profiling report and 3 charts saved
+2026-11-13 13:00:56,017 | INFO | Step 2 of 3: cleaning
+2026-11-13 13:00:56,197 | INFO | Rows 121 -> 106
+2026-11-13 13:00:56,197 | INFO | Quality score 89.67 -> 98.43
+2026-11-13 13:00:56,198 | INFO | Step 3 of 3: validation
+2026-11-13 13:00:56,229 | INFO | Validation status: PASS
+2026-11-13 13:00:56,229 | INFO | Health score: 98.08
+2026-11-13 13:00:56,230 | INFO | Pipeline finished in 1.3 seconds
